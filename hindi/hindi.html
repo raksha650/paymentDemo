@@ -1,0 +1,50 @@
+<div>
+    <table id="rblLanguage">
+        <tr>
+            <td>
+                <input id="rblLanguage_0" type="radio" name="rblLanguage" value="English" /><label
+                    for="rblLanguage_0">English</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="rblLanguage_1" type="radio" name="rblLanguage" value="Hindi" /><label
+                    for="rblLanguage_1">Hindi</label>
+            </td>
+        </tr>
+    </table>
+    <textarea name="txtText" id="txtText" rows="5"></textarea>
+</div>
+<style type="text/css">
+    @font-face
+    {
+        /* Font Name to use*/
+        font-family: 'HindiFont';
+        /* Font path*/
+        src: url("k010.ttf");
+    }
+    body
+    {
+        font-size: 20px;
+    }
+    .hindiFont
+    {
+        /* Assign the font*/
+        font-family: 'HindiFont';
+    }
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('[id*=rblLanguage]').on("change", function () {
+            var selected = $(this).find('input:checked').val();
+            var textBox = $('[id*=txtText]');
+            if (selected == "Hindi") {
+                $(textBox).attr('class', 'hindiFont');
+            }
+            else {
+                $(textBox).attr('class', '');
+            }
+        });
+    });
+</script>

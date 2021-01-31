@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Inscript KeyBoard Typing by CodingKeeda.</title>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="InscriptKeyBoard.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GetInscriptTyping();
+        });
+     
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+    <h1><center>Inscript Keyboard Typing by Coding Keeda</center></h1><br />
+        <h4>Use Esc button to switch to English.Shift button to get full words.Ctrl+Alt for hindi numbers</h4>
+        <textarea id="txtInscript" style="height: 194px;width: 1330px;" class="Inscript"></textarea><%--Inscript class used on textarea--%>
+    </div>
+    </form>
+</body>
+</html>
